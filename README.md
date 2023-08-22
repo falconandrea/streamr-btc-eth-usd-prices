@@ -43,7 +43,7 @@ To run the script, execute the following command:
 node create-new-streamr.js
 ```
 
-2. Update streamr - `update-streamr.js`
+2. **update-streamr.js**
 
 This script retrieves data from the specified API and sends it to the Streamr stream.
 
