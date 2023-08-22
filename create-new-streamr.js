@@ -6,7 +6,7 @@ dotenv.config();
 const StreamrClient = require("streamr-client");
 
 // Create async function to create a new stream
-async function createStream() {
+const createStream = async () => {
   // Initialize the client with an Ethereum account
   const streamr = new StreamrClient({
     auth: {
@@ -20,6 +20,6 @@ async function createStream() {
   });
 
   console.log(stream.id); // e.g. `0x123.../foo/bar`
-}
+};
 
 createStream();
