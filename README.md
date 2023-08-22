@@ -21,7 +21,7 @@ The stream will be set up to broadcast data at regular intervals, providing an u
 - Streamr URL: `0x163b33c875cd58acaeb557fdc00e30e17f826730/btc-eth-usd-price`
 - Frequency: Updated every 5 minutes
 - Data Format: JSON
-- Data Structure: { "currency": "ETH", "price": 3500.00, "timestamp": 1678976543 }
+- Data Structure: `{ "bitcoin": {"usd":26004}, "ethereum": {"usd":1656.13}, "timestamp": 1692719868 }`
 
 ### Getting Started
 
