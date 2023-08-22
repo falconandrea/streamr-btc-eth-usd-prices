@@ -65,6 +65,24 @@ node update-streamr.js
 
 Remember to adjust any placeholders or details in the instructions to match your actual project setup.
 
+## Extra: Webserver to host
+
+To make the data updating process automated and accessible online, I've created a simple web server using Express with the `server.js` file. This server hosts the code that sends data to Streamr, and it can be accessed via an endpoint that triggers the data update.
+
+### Accessing the Endpoint
+
+The endpoint for triggering the data update is `/api/update-streamr`. However, access to this endpoint is restricted to a predefined list of allowed IP addresses for security reasons.
+
+## Automating the Process with a Cron Job
+
+To further streamline the data updating process, you can set up a cron job that periodically accesses the endpoint and triggers the script execution. This can be achieved by configuring a cron job to make a GET request to the endpoint URL at specified intervals.
+
+### Example Cron Job:
+
+```bash
+*/5 * * * * curl -X GET "https://your-server.com/api/update-streamr"
+```
+
 ## Contribute
 
 If you would like to contribute to this project, feel free to submit a pull request. Contributions are welcome!
