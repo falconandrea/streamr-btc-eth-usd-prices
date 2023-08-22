@@ -45,7 +45,7 @@ node create-new-streamr.js
 
 **After running the script:**
 
-- Go to the [Streamr Hum](https://streamr.network/hub/streams) and log in.
+- Go to the [Streamr Hub](https://streamr.network/hub/streams) and log in.
 - Click on "Your streams" and click on your new streamr.
 - Modify the access control settings to "Public".
 - Set up data storage and specify the number of historical days.
