@@ -28,21 +28,32 @@ The stream will be set up to broadcast data at regular intervals, providing an u
 To use this project, follow these steps:
 
 1. Clone this repository to your local machine.
-2. Set up your development environment in `.env` file.
-3. Run `npm install` to install packages and dependencies.
+2. Set up your development environment by creating a `.env` file.
+3. Run `npm install` to install required packages and dependencies.
 
 ### Files
 
-1. Create new streamr - `create-new-streamr.js`
+1. **create-new-streamr.js**
 
-The file creates a new stream on the Streamr Network and return the URL.
-**_The action request MATIC Tokens._**
+This script creates a new stream on the Streamr Network and print the corresponding URL. This action requires MATIC Tokens for processing.
 
-Launch script with:
+To run the script, execute the following command:
 
 ```bash
 node create-new-streamr.js
 ```
+
+2. Update streamr - `update-streamr.js`
+
+This script retrieves data from the specified API and sends it to the Streamr stream.
+
+To run the script, execute the following command:
+
+```bash
+node update-streamr.js
+```
+
+Remember to adjust any placeholders or details in the instructions to match your actual project setup.
 
 ## Contribute
 
