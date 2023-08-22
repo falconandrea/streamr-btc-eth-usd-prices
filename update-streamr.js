@@ -32,22 +32,39 @@ const publishToStreamr = async (msg) => {
     },
   });
 
-  // Get streamr
-  const stream = await streamr.getStream(process.env.STREAMR_URL);
+  try {
+    // Get streamr
+    const stream = await streamr.getStream(process.env.STREAMR_URL);
 
-  // Publish message
-  const result = await stream.publish(msg);
+    // Publish message
+    const result = await stream.publish(msg);
+
+    console.log("Message published successfully:", result);
+  } catch (error) {
+    console.error("Error publishing message:", error);
+  }
 };
 
 const main = async () => {
-  // Get data from API
-  const data = await getDataFromAPI();
+  try {
+    // Get data from API
+    const data = await getDataFromAPI();
 
-  // Add timestamp
-  data.timestamp = Date.now();
+    // Add timestamp
+    data.timestamp = Date.now();
 
-  // Send data to Streamr
-  await publishToStreamr(data);
+    // Send data to Streamr
+    await publishToStreamr(data);
+
+    console.log("Script completed successfully");
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
 };
 
-main();
+main().then(() => {
+  // wait 10 seconds
+  setTimeout(() => {
+    process.exit();
+  }, 5 * 1000);
+});
