@@ -43,6 +43,16 @@ To run the script, execute the following command:
 node create-new-streamr.js
 ```
 
+**After running the script:**
+
+- Go to the [Streamr Hum](https://streamr.network/hub/streams) and log in.
+- Click on "Your streams" and click on your new streamr.
+- Modify the access control settings to "Public".
+- Set up data storage and specify the number of historical days.
+- Save your changes.
+
+Note: These actions will trigger transactions that incur a cost of 2-3 cents in MATIC Tokens.
+
 2. **update-streamr.js**
 
 This script retrieves data from the specified API and sends it to the Streamr stream.
