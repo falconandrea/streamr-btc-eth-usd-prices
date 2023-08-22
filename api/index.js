@@ -55,7 +55,13 @@ const main = async () => {
 };
 
 // Whitelist ips
-const allowedIPs = ["127.0.0.1", "192.168.1.1"];
+const allowedIPs = ["127.0.0.1", "192.168.1.1", "84.220.62.14"];
+
+app.get("/api", (req, res) => {
+  res.setHeader("Content-Type", "text/json");
+  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+  res.end({ message: "Hello World" });
+});
 
 app.get("/api/update-streamr", async (req, res) => {
   const clientIP = req.ip;
@@ -72,11 +78,6 @@ app.get("/api/update-streamr", async (req, res) => {
     // Block if you have no access
     res.status(403).send("Access denied.");
   }
-});
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
 });
 
 // Export the Express API
