@@ -55,15 +55,15 @@ const main = async () => {
 };
 
 // Whitelist ips
-const allowedIPs = ["127.0.0.1", "192.168.1.1", "84.220.62.14"];
+const allowedIPs = ["127.0.0.1"];
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.setHeader("Content-Type", "text/json");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
   res.end({ message: "Hello World" });
 });
 
-app.get("/api/update-streamr", async (req, res) => {
+app.get("/update-streamr", async (req, res) => {
   const clientIP = req.ip;
 
   console.log("Check ip: ", clientIP);
@@ -81,8 +81,6 @@ app.get("/api/update-streamr", async (req, res) => {
   }
 });
 
-/*
-// COMMENT THESE LINES TO RUN THE SCRIPT ON VERCEL
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
@@ -90,4 +88,3 @@ app.listen(port, () => {
 
 // Export the Express API
 module.exports = app;
-*/
