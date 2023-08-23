@@ -71,7 +71,7 @@ app.get("/api/update-streamr", async (req, res) => {
   // Check ip is allowed
   // if (allowedIPs.includes(clientIP)) {
   if (true) {
-    // await main();
+    await main();
 
     // Confirm reply message
     res.send("Script update-streamr executed.");
@@ -80,6 +80,7 @@ app.get("/api/update-streamr", async (req, res) => {
     res.status(403).send("Access denied.");
   }
 });
+
 /*
 // COMMENT THESE LINES TO RUN THE SCRIPT ON VERCEL
 const port = process.env.PORT || 3000;
