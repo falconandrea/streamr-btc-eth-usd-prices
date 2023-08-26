@@ -82,6 +82,8 @@ To run the script, execute the following command:
 node listen.js
 ```
 
+### Extra: web server
+
 4. **server.js**
 
 To make the data updating process automated and accessible online, I've created a simple web server using Express with the `server.js` file. This server hosts the code that sends data to Streamr, and it can be accessed via an endpoint that triggers the data update.
