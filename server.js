@@ -66,11 +66,8 @@ app.get("/", (req, res) => {
 app.get("/update-streamr", async (req, res) => {
   const clientIP = req.ip;
 
-  console.log("Check ip: ", clientIP);
-
   // Check ip is allowed
-  // if (allowedIPs.includes(clientIP)) {
-  if (true) {
+  if (allowedIPs.includes(clientIP)) {
     await main();
 
     // Confirm reply message

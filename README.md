@@ -72,13 +72,23 @@ node update-streamr.js
 
 Remember to adjust any placeholders or details in the instructions to match your actual project setup.
 
-## Extra: Webserver to host
+3. **listen.js**
+
+This script demonstrates how to listen to the streamr and retrieve updated price data.
+
+To run the script, execute the following command:
+
+```bash
+node listen.js
+```
+
+4. **server.js**
 
 To make the data updating process automated and accessible online, I've created a simple web server using Express with the `server.js` file. This server hosts the code that sends data to Streamr, and it can be accessed via an endpoint that triggers the data update.
 
 ### Accessing the Endpoint
 
-The endpoint for triggering the data update is `/api/update-streamr`. However, access to this endpoint is restricted to a predefined list of allowed IP addresses for security reasons.
+The endpoint on express server for triggering the data update is `/api/update-streamr`. However, access to this endpoint is restricted to a predefined list of allowed IP addresses for security reasons.
 
 ## Automating the Process with a Cron Job
 
@@ -89,6 +99,8 @@ To further streamline the data updating process, you can set up a cron job that 
 ```bash
 */5 * * * * curl -X GET "https://your-server.com/api/update-streamr"
 ```
+
+Notes: You have to install `express` with the command `npm install express`, update the file `server.js` with the ip where you hosting the cronjob script or the ip of the service you use to run the job.
 
 ## Contribute
 
