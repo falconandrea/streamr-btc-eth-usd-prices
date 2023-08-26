@@ -55,7 +55,7 @@ const main = async () => {
 };
 
 // Whitelist ips
-const allowedIPs = ["127.0.0.1"];
+const allowedIPs = ["127.0.0.1", "::1"];
 
 app.get("/", (req, res) => {
   res.setHeader("Content-Type", "text/json");
