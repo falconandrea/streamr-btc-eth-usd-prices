@@ -1,4 +1,4 @@
-# Streamr Open Data Challenge
+# ETH and BTC price in USD - Streamr Open Data
 
 ## Overview
 
@@ -19,9 +19,14 @@ The stream will be set up to broadcast data at regular intervals, providing an u
 
 - Stream Name: BTC-ETH-USD-Price
 - Streamr URL: `0x163b33c875cd58acaeb557fdc00e30e17f826730/btc-eth-usd-price`
-- Frequency: Updated every 5 minutes
-- Data Format: JSON
+- Project link: [ETH and BTC price in USD](https://streamr.network/hub/projects/0xa16f5969418978a2fcb409af2fe43fa3bcd1c1122931da4b9aca73692956f375/edit)
+- Frequency: Updated every 5 minutes (**_Working in Progress_**)
+- Output data format: JSON
 - Data Structure: `{ "bitcoin": {"usd":26004}, "ethereum": {"usd":1656.13}, "timestamp": 1692719868 }`
+
+### Work in progress
+
+- I'm working to host the code online on Vercel in order to automate the data update on the streamr through the cronjob as shown at the end of this Readme. At the moment I have some problems getting the script to work on Vercel and I'm waiting for the client to be updated to the new version to verify its correct functioning and the fix of the problem I reported on Discord.
 
 ### Getting Started
 
@@ -48,8 +53,10 @@ node create-new-streamr.js
 - Go to the [Streamr Hub](https://streamr.network/hub/streams) and log in.
 - Click on "Your streams" and click on your new streamr.
 - Modify the access control settings to "Public".
-- Set up data storage and specify the number of historical days.
+- Set up description, data storage and specify the number of historical days.
 - Save your changes.
+- Create the project on [Projects](https://streamr.network/hub/projects)
+- Insert image, description and select the streamrs created above and publish it.
 
 Note: These actions will trigger transactions that incur a cost of 2-3 cents in MATIC Tokens.
 
